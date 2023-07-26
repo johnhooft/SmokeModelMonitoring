@@ -71,6 +71,7 @@ def drawtiles(data, file_name):
                 plt.text(x,y, round(tile_probs[j,i], 2), size='medium', weight='heavy', color='white' if tile_probs[j,i]<0.75 else 'red')
 
     os.remove(file_name)
-    plt.savefig("output_image.png")
+    newimage_name = "output_image.png"
+    plt.savefig(newimage_name)
     print("Data Visualization Plot saved as 'output_image.png'.")
-    return data.timestamp
+    return data.timestamp, newimage_name
