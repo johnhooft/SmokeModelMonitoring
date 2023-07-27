@@ -29,7 +29,7 @@ def send_slack_message_with_image(token, channel, message, image_path):
 def message_format(metadata):
     text = ''
     text += 'Timestamp: ' + str(metadata[0]) + '\n'
-    if metadata[1]: text += 'Camera site: Bear Mtn\n'
+    if metadata[1] == 'V040': text += 'Camera site: Bear Mtn\n'
     else: text += 'Camera site: Prairie\n'
     if metadata[2]: text += 'Fire detected.\n'
     else: text += 'No fire detected.\n'
